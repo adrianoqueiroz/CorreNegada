@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Corre Negada</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_metas">MetasActivity</string>
+    <string name="btMetas">Metas</string>
+    <string name="btLocaisTreino">Locais de Treino</string>
+    <string name="btDicas">Dicas</string>
+    <string name="btResultados">Resultados</string>
+    <string name="tituloMetas">Metas</string>
+    <string name="btNova">Nova</string>
+    <string name="btSugeridas">Sugeridas</string>
+    <string name="btInicio">Início</string>
+    <string name="btExcluir">Excluir</string>
+    <string name="title_activity_locais_treino">LocaisTreinoActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_detalhes_meta">DetalhesMetaActivity</string>
+
+</resources>

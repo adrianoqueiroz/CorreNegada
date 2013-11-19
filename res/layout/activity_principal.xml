@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg3"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".PrincipalActivity" >
+
+    <Button
+        android:id="@+id/btCorrer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@layout/botao_correr" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btCorrer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="56dp"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btMetas"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btMetas" />
+
+        <Button
+            android:id="@+id/btLocais"
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btLocaisTreino" />
+
+        <Button
+            android:id="@+id/btDicas"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btDicas" />
+
+        <Button
+            android:id="@+id/btResultados"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btResultados" />
+    </LinearLayout>
+
+</RelativeLayout>
