@@ -19,6 +19,7 @@
         android:background="@layout/botao_correr" />
 
     <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/btCorrer"
@@ -31,11 +32,13 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="cadastrarMetasClick"
             android:text="@string/btMetas" />
 
         <Button
             android:id="@+id/btLocais"
             android:layout_width="205dp"
+            style="?android:attr/buttonStyleSmall"
             android:layout_height="wrap_content"
             android:text="@string/btLocaisTreino" />
 
@@ -51,7 +54,16 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/btResultados" />
-    </LinearLayout>
+            android:text="@string/btResultados" />    
+
+	    <Button
+	        android:id="@+id/btConfiguracoes"
+	        android:layout_width="match_parent"
+	        style="?android:attr/buttonStyleSmall"
+	        android:layout_height="wrap_content"
+	        android:onClick="AlterarConfiguracoesClick"
+	        android:text="@string/btConf" />
+	    
+	</LinearLayout>
 
 </RelativeLayout>

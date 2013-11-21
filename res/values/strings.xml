@@ -9,6 +9,11 @@
     <string name="btLocaisTreino">Locais de Treino</string>
     <string name="btDicas">Dicas</string>
     <string name="btResultados">Resultados</string>
+    <string name="viewAlterarSenha">Alterar Senha</string>
+    <string name="viewNotificacoes">Permitir Notificações</string>
+    <string name="viewPublicarFace">Publicar no Facebook</string>
+    <string name="viewAtualizacoes">Permitir atualização automática</string>
+    <string name="btConf">Configurações</string>
     <string name="tituloMetas">Metas</string>
     <string name="btNova">Nova</string>
     <string name="btSugeridas">Sugeridas</string>
@@ -17,5 +22,6 @@
     <string name="title_activity_locais_treino">LocaisTreinoActivity</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_detalhes_meta">DetalhesMetaActivity</string>
-
+    <string name="title_activity_configuracoes">Configuracoes</string>
+    
 </resources>
