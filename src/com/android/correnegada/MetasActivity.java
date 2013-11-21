@@ -75,10 +75,20 @@ public class MetasActivity extends Activity {
 					break;
 				case 1:
 					mensagem = "Vendo detalhes de " + textViewItem.getText().toString();
+					Toast.makeText(MetasActivity.this, mensagem, Toast.LENGTH_LONG).show();
 
 					Intent trocarActivity1 = new Intent( MetasActivity.this, DetalhesMetaActivity.class);
 	                startActivityForResult(trocarActivity1, 1);
 					break;
+
+				case 2:
+					mensagem = "Vendo detalhes de " + textViewItem.getText().toString();
+					Toast.makeText(MetasActivity.this, mensagem, Toast.LENGTH_LONG).show();
+
+					Intent trocarActivity2 = new Intent( MetasActivity.this, DetalhesMetaActivity.class);
+	                startActivityForResult(trocarActivity2, 1);
+					break;
+
 				default:
 					break;
 					
