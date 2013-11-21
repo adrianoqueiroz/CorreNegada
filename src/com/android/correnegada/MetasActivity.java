@@ -36,9 +36,13 @@ public class MetasActivity extends Activity {
         btNovaMeta = (Button) findViewById(R.id.btNova);
 	
         popularListView();
-        selecionaItemMenu();
-        
-        
+        selecionaItemMenu();               
+	}
+	
+	public void criarNovaMetaClick(View v){
+		
+		Intent novaMeta = new Intent(getBaseContext(), NovaMetaActivity.class);
+		startActivity(novaMeta);
 	}
 	
 	private void popularListView(){

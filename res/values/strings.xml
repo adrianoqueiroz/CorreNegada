@@ -15,13 +15,19 @@
     <string name="viewAtualizacoes">Permitir atualização automática</string>
     <string name="btConf">Configurações</string>
     <string name="tituloMetas">Metas</string>
+    <string name="lblDefinirDist">Definir Distância</string>
+    <string name="lblPontoInicial">Ponto Inicial</string>
+    <string name="lblPontoFinal">Ponto Final</string>
+    <string name="lblCalcDistancia">Calcular Distância</string>
     <string name="btNova">Nova</string>
     <string name="btSugeridas">Sugeridas</string>
     <string name="btInicio">Início</string>
+    <string name="btIdaVolta">Ida e Volta</string>
     <string name="btExcluir">Excluir</string>
     <string name="title_activity_locais_treino">LocaisTreinoActivity</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_detalhes_meta">DetalhesMetaActivity</string>
     <string name="title_activity_configuracoes">Configuracoes</string>
-    
+    <string name="title_activity_nova_meta">NovaMetaActivity</string>
+
 </resources>

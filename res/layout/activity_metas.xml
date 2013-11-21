@@ -46,6 +46,7 @@
             android:id="@+id/btNova"
             style="android:buttonStyle"
             android:layout_width="80dp"
+            android:onClick="criarNovaMetaClick"
             android:layout_height="50dp"
             android:text="@string/btNova"
             

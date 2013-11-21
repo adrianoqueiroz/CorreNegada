@@ -43,9 +43,13 @@
             android:name="com.android.correnegada.DetalhesMetaActivity"
             android:label="@string/title_activity_detalhes_meta" >
         </activity>
-         <activity
+        <activity
             android:name="com.android.correnegada.ConfiguracoesActivity"
             android:label="@string/title_activity_configuracoes" >
+        </activity>
+        <activity
+            android:name="com.android.correnegada.NovaMetaActivity"
+            android:label="@string/title_activity_nova_meta" >
         </activity>
     </application>
 
