@@ -11,34 +11,50 @@ import android.widget.ListView;
 public class PrincipalActivity extends Activity {
 
 	ListView listView;
-	
+
 	Button btMetas, btCorrer;
-	
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_principal);       
-        btMetas = (Button) findViewById(R.id.btMetas);
-        btCorrer = (Button) findViewById(R.id.btCorrer);        
-    }
 
-    public void cadastrarMetasClick(View v){
-				
-		Intent TelaMetas = new Intent(getBaseContext(),MetasActivity.class);
-		startActivity(TelaMetas);				
-    }
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_principal);
+		btMetas = (Button) findViewById(R.id.btMetas);
+		btCorrer = (Button) findViewById(R.id.btCorrer);
 
-    public void AlterarConfiguracoesClick(View v){
-    	
-    	Intent TelaConf = new Intent(getBaseContext(),ConfiguracoesActivity.class);
+		btCorrer.setOnClickListener(new View.OnClickListener() {
+
+			public void onClick(View v) {
+				Intent telaCorrida = new Intent(PrincipalActivity.this,
+						CorridaActivity.class);
+				PrincipalActivity.this.startActivity(telaCorrida);
+			}
+		});
+
+	}
+
+	public void iniciarCorrida(View v) {
+		Intent TelaCorrida = new Intent(getBaseContext(), CorridaActivity.class);
+		startActivity(TelaCorrida);
+	}
+
+	public void cadastrarMetasClick(View v) {
+
+		Intent TelaMetas = new Intent(getBaseContext(), MetasActivity.class);
+		startActivity(TelaMetas);
+	}
+
+	public void AlterarConfiguracoesClick(View v) {
+
+		Intent TelaConf = new Intent(getBaseContext(),
+				ConfiguracoesActivity.class);
 		startActivity(TelaConf);
-    }
-    
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.principal, menu);
-        return true;
-    }
-    
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.principal, menu);
+		return true;
+	}
+
 }

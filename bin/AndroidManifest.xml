@@ -51,6 +51,10 @@
             android:name="com.android.correnegada.NovaMetaActivity"
             android:label="@string/title_activity_nova_meta" >
         </activity>
+        <activity
+            android:name="com.android.correnegada.CorridaActivity"
+            android:label="@string/title_activity_corrida" >
+        </activity>
     </application>
 
 </manifest>

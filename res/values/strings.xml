@@ -29,5 +29,6 @@
     <string name="title_activity_detalhes_meta">DetalhesMetaActivity</string>
     <string name="title_activity_configuracoes">Configuracoes</string>
     <string name="title_activity_nova_meta">NovaMetaActivity</string>
+    <string name="title_activity_corrida">CorridaActivity</string>
 
 </resources>
