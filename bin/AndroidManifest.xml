@@ -55,6 +55,10 @@
             android:name="com.android.correnegada.CorridaActivity"
             android:label="@string/title_activity_corrida" >
         </activity>
+        <activity
+            android:name="com.android.correnegada.CronometroActivity"
+            android:label="@string/title_activity_cronometro" >
+        </activity>
     </application>
 
 </manifest>

@@ -30,5 +30,6 @@
     <string name="title_activity_configuracoes">Configuracoes</string>
     <string name="title_activity_nova_meta">NovaMetaActivity</string>
     <string name="title_activity_corrida">CorridaActivity</string>
+    <string name="title_activity_cronometro">CronometroActivity</string>
 
 </resources>
