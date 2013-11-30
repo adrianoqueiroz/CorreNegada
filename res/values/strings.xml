@@ -6,6 +6,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_metas">MetasActivity</string>
     <string name="btMetas">Metas</string>
+    <string name="lblMapa">Mapa</string>
     <string name="lblAtividade">Atividade</string>
     <string name="lblAtividades">Atividades</string>
     <string name="lblPersonalizar">Personalizar</string>

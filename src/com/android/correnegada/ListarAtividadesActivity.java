@@ -24,6 +24,8 @@ public class ListarAtividadesActivity extends Activity implements LocationListen
 	private double lo;
 	
 	TabHost abas;
+	TabSpec descritor;
+	
 	private static final String CAMPO_OBRIGATORIO = "Campo obrigatório";
 	
 	@Override
@@ -34,7 +36,7 @@ public class ListarAtividadesActivity extends Activity implements LocationListen
 		abas = (TabHost) findViewById(R.id.tabhost);
 		abas.setup();
 		 
-		TabSpec descritor = abas.newTabSpec("aba1");
+		descritor = abas.newTabSpec("aba1");		
 		descritor.setContent(R.id.atividades);
 		descritor.setIndicator(getString(R.string.lblAtividade));
 		abas.addTab(descritor);
@@ -42,6 +44,11 @@ public class ListarAtividadesActivity extends Activity implements LocationListen
 		descritor = abas.newTabSpec("aba2");
 		descritor.setContent(R.id.personalizar);
 		descritor.setIndicator(getString(R.string.lblPersonalizar));
+		abas.addTab(descritor);
+		
+		descritor = abas.newTabSpec("aba3");
+		descritor.setContent(R.id.mapa);
+		descritor.setIndicator(getString(R.string.lblMapa));
 		abas.addTab(descritor);
 	}
 
