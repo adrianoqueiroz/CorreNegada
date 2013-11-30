@@ -6,6 +6,9 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_metas">MetasActivity</string>
     <string name="btMetas">Metas</string>
+    <string name="lblAtividade">Atividade</string>
+    <string name="lblAtividades">Atividades</string>
+    <string name="lblPersonalizar">Personalizar</string>
     <string name="btLocaisTreino">Locais de Treino</string>
     <string name="btDicas">Dicas</string>
     <string name="btResultados">Resultados</string>
@@ -21,6 +24,12 @@
     <string name="lblCalcDistancia">Calcular Distância</string>
     <string name="btNova">Nova</string>
     <string name="btSugeridas">Sugeridas</string>
+    <string name="ok">Ok</string>
+    <string name="inserir_atividade">Inserir tipo de atividade</string>
+    <string name="calorias_perdidas">Calorias perdidas por m</string>
+    <string name="kcal">kcal</string>
+    <string name="adicionar_atividade">Adicionar as minhas atividades</string>
+    <string name="cancelar">Cancelar</string>
     <string name="btInicio">Início</string>
     <string name="btIdaVolta">Ida e Volta</string>
     <string name="btExcluir">Excluir</string>
@@ -31,5 +40,7 @@
     <string name="title_activity_nova_meta">NovaMetaActivity</string>
     <string name="title_activity_corrida">CorridaActivity</string>
     <string name="title_activity_cronometro">CronometroActivity</string>
+    <string name="title_activity_cadastrar_atividade">CadastrarAtividadeActivity</string>
+    <string name="title_activity_listar_atividades">ListarAtividadesActivity</string>
 
 </resources>

@@ -59,6 +59,14 @@
             android:name="com.android.correnegada.CronometroActivity"
             android:label="@string/title_activity_cronometro" >
         </activity>
+        <!-- <activity -->
+        <!-- android:name="com.android.correnegada.CadastrarAtividadeActivity" -->
+        <!-- android:label="@string/title_activity_cadastrar_atividade" > -->
+        <!-- </activity> -->
+        <activity
+            android:name="com.android.correnegada.ListarAtividadesActivity"
+            android:label="@string/title_activity_listar_atividades" >
+        </activity>
     </application>
 
 </manifest>

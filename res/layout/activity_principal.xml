@@ -32,8 +32,8 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="cadastrarMetasClick"
-            android:text="@string/btMetas" />
+            android:onClick="atividadesClick"
+            android:text="@string/lblAtividades" />
 
         <Button
             android:id="@+id/btLocais"

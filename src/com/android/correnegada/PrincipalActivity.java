@@ -37,10 +37,10 @@ public class PrincipalActivity extends Activity {
 		startActivity(TelaCorrida);
 	}
 
-	public void cadastrarMetasClick(View v) {
+	public void atividadesClick(View v) {
 
-		Intent TelaMetas = new Intent(getBaseContext(), MetasActivity.class);
-		startActivity(TelaMetas);
+		Intent atividades = new Intent(getBaseContext(), ListarAtividadesActivity.class);
+		startActivity(atividades);
 	}
 
 	public void AlterarConfiguracoesClick(View v) {
