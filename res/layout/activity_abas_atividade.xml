@@ -56,9 +56,7 @@
 						        android:layout_height="35dp"
 						        android:layout_alignLeft="@+id/textView1"
 						        android:layout_below="@+id/textView1"
-						        android:ems="10" >
-						
-						        <requestFocus />
+						        android:ems="10" >						
 						    </EditText>
 						
 						    <TextView
