@@ -3,7 +3,9 @@ package com.android.correnegada;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteCursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.location.Criteria;
 import android.location.Location;
@@ -11,12 +13,13 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TabHost;
-import android.widget.Toast;
 import android.widget.TabHost.TabSpec;
+import android.widget.Toast;
 
 public class ListarAtividadesActivity extends Activity implements LocationListener{
 
@@ -77,17 +80,18 @@ public class ListarAtividadesActivity extends Activity implements LocationListen
 		ListView ltwDados = (ListView)findViewById(R.id.atividades);
 		ltwDados.setAdapter(adp);
 		
-//		LTWDADOS.SETONITEMCLICKLISTENER(NEW ADAPTERVIEW.ONITEMCLICKLISTENER() {
-//
-//			@OVERRIDE
-//			PUBLIC VOID ONITEMCLICK(ADAPTERVIEW ADAPTER, VIEW V, INT POSITION, LONG ID) {
-//				
-//				SQLITECURSOR C = (SQLITECURSOR) ADAPTER.GETADAPTER().GETITEM(POSITION);
-//				INTENT I = NEW INTENT(GETBASECONTEXT(), EDITAR.CLASS);
-//				I.PUTEXTRA("ID", C.GETINT(0));
-//				STARTACTIVITY(I);
-//			}
-//		});
+		ltwDados.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+		
+			@Override
+			public void onItemClick(AdapterView adapter, View v, int position, long id) {
+				
+				SQLiteCursor c = (SQLiteCursor) adapter.getAdapter().getItem(position);
+				Intent i = new Intent(getBaseContext(), MapActivity.class);
+				i.putExtra("latitude", c.getDouble(c.getColumnIndex("la")));
+				i.putExtra("longitude", c.getDouble(c.getColumnIndex("lo")));
+				startActivity(i);
+			}
+		});
 		
 		db.close();
 	}

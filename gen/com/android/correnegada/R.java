@@ -293,11 +293,12 @@ containing a value of this type.
         public static final int activity_listar_modelo=0x7f030005;
         public static final int activity_locais_treino=0x7f030006;
         public static final int activity_login=0x7f030007;
-        public static final int activity_metas=0x7f030008;
-        public static final int activity_nova_meta=0x7f030009;
-        public static final int activity_principal=0x7f03000a;
-        public static final int botao_correr=0x7f03000b;
-        public static final int da_item=0x7f03000c;
+        public static final int activity_map=0x7f030008;
+        public static final int activity_metas=0x7f030009;
+        public static final int activity_nova_meta=0x7f03000a;
+        public static final int activity_principal=0x7f03000b;
+        public static final int botao_correr=0x7f03000c;
+        public static final int da_item=0x7f03000d;
     }
     public static final class menu {
         public static final int cadastrar_atividade=0x7f0a0000;
@@ -308,15 +309,16 @@ containing a value of this type.
         public static final int locais_treino=0x7f0a0005;
         public static final int login=0x7f0a0006;
         public static final int main=0x7f0a0007;
-        public static final int metas=0x7f0a0008;
-        public static final int nova_meta=0x7f0a0009;
-        public static final int principal=0x7f0a000a;
+        public static final int map=0x7f0a0008;
+        public static final int metas=0x7f0a0009;
+        public static final int nova_meta=0x7f0a000a;
+        public static final int principal=0x7f0a000b;
     }
     public static final class string {
-        public static final int action_forgot_password=0x7f060049;
+        public static final int action_forgot_password=0x7f06004a;
         public static final int action_settings=0x7f06001b;
-        public static final int action_sign_in_register=0x7f060047;
-        public static final int action_sign_in_short=0x7f060048;
+        public static final int action_sign_in_register=0x7f060048;
+        public static final int action_sign_in_short=0x7f060049;
         public static final int adicionar_atividade=0x7f060036;
         public static final int app_name=0x7f06001a;
         /**   Title for notification shown when GooglePlayServices needs to be
@@ -425,10 +427,10 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f060013;
-        public static final int error_field_required=0x7f06004e;
-        public static final int error_incorrect_password=0x7f06004d;
-        public static final int error_invalid_email=0x7f06004b;
-        public static final int error_invalid_password=0x7f06004c;
+        public static final int error_field_required=0x7f06004f;
+        public static final int error_incorrect_password=0x7f06004e;
+        public static final int error_invalid_email=0x7f06004c;
+        public static final int error_invalid_password=0x7f06004d;
         public static final int hello_world=0x7f06001c;
         public static final int inserir_atividade=0x7f060033;
         public static final int kcal=0x7f060035;
@@ -440,12 +442,12 @@ containing a value of this type.
         public static final int lblPersonalizar=0x7f060022;
         public static final int lblPontoFinal=0x7f06002e;
         public static final int lblPontoInicial=0x7f06002d;
-        public static final int login_progress_signing_in=0x7f06004a;
+        public static final int login_progress_signing_in=0x7f06004b;
         public static final int ok=0x7f060032;
         /**  Strings related to login 
          */
-        public static final int prompt_email=0x7f060045;
-        public static final int prompt_password=0x7f060046;
+        public static final int prompt_email=0x7f060046;
+        public static final int prompt_password=0x7f060047;
         public static final int title_activity_cadastrar_atividade=0x7f060042;
         public static final int title_activity_configuracoes=0x7f06003e;
         public static final int title_activity_corrida=0x7f060040;
@@ -453,8 +455,9 @@ containing a value of this type.
         public static final int title_activity_detalhes_meta=0x7f06003d;
         public static final int title_activity_listar_atividades=0x7f060043;
         public static final int title_activity_locais_treino=0x7f06003b;
-        public static final int title_activity_login=0x7f060044;
+        public static final int title_activity_login=0x7f060045;
         public static final int title_activity_main=0x7f06003c;
+        public static final int title_activity_map=0x7f060044;
         public static final int title_activity_metas=0x7f06001d;
         public static final int title_activity_nova_meta=0x7f06003f;
         public static final int tituloMetas=0x7f06002b;
