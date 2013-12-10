@@ -51,21 +51,21 @@ public final class R {
         public static final int btOk=0x7f090008;
         public static final int btPontoInicial=0x7f090028;
         public static final int btResultados=0x7f090030;
-        public static final int bt_cronometro=0x7f090010;
+        public static final int bt_cronometro=0x7f090012;
         public static final int button1=0x7f090025;
-        public static final int button2=0x7f090015;
-        public static final int button4=0x7f090016;
+        public static final int button2=0x7f090014;
+        public static final int button4=0x7f090015;
         public static final int cbxIdaVolta=0x7f09002a;
         public static final int checkBox1=0x7f09000a;
         public static final int checkBox2=0x7f09000d;
         public static final int checkBox3=0x7f09000e;
-        public static final int chronometer=0x7f090011;
-        public static final int countDown=0x7f090013;
+        public static final int chronometer=0x7f090016;
+        public static final int countDown=0x7f090011;
         public static final int editText1=0x7f09002b;
         public static final int email=0x7f09001e;
         public static final int lVMetas=0x7f090022;
         public static final int linearLayout1=0x7f090023;
-        public static final int linearLayout2=0x7f090014;
+        public static final int linearLayout2=0x7f090013;
         public static final int login=0x7f090020;
         public static final int login_form=0x7f09001d;
         public static final int login_status=0x7f09001b;
@@ -75,10 +75,10 @@ public final class R {
         public static final int personalizar=0x7f090002;
         public static final int progressBar1=0x7f09000f;
         public static final int sign_in_button=0x7f090021;
+        public static final int tVAtividade=0x7f090006;
         public static final int tabhost=0x7f090000;
         public static final int textView1=0x7f090003;
-        public static final int textView2=0x7f090006;
-        public static final int textView5=0x7f090012;
+        public static final int textView5=0x7f090010;
         public static final int txbPontoFinal=0x7f090029;
         public static final int txbPontoInicial=0x7f090027;
         public static final int txtAtividade=0x7f090005;
@@ -124,12 +124,13 @@ public final class R {
         public static final int principal=0x7f08000b;
     }
     public static final class string {
-        public static final int action_forgot_password=0x7f060030;
+        public static final int action_forgot_password=0x7f060033;
         public static final int action_settings=0x7f060001;
-        public static final int action_sign_in_register=0x7f06002e;
-        public static final int action_sign_in_short=0x7f06002f;
+        public static final int action_sign_in_register=0x7f060031;
+        public static final int action_sign_in_short=0x7f060032;
         public static final int adicionar_atividade=0x7f06001c;
         public static final int app_name=0x7f060000;
+        public static final int atividade=0x7f06002b;
         public static final int btConf=0x7f060010;
         public static final int btDicas=0x7f06000a;
         public static final int btExcluir=0x7f060020;
@@ -142,10 +143,10 @@ public final class R {
         public static final int btSugeridas=0x7f060017;
         public static final int calorias_perdidas=0x7f06001a;
         public static final int cancelar=0x7f06001d;
-        public static final int error_field_required=0x7f060035;
-        public static final int error_incorrect_password=0x7f060034;
-        public static final int error_invalid_email=0x7f060032;
-        public static final int error_invalid_password=0x7f060033;
+        public static final int error_field_required=0x7f060038;
+        public static final int error_incorrect_password=0x7f060037;
+        public static final int error_invalid_email=0x7f060035;
+        public static final int error_invalid_password=0x7f060036;
         public static final int hello_world=0x7f060002;
         public static final int inserir_atividade=0x7f060019;
         public static final int kcal=0x7f06001b;
@@ -157,12 +158,13 @@ public final class R {
         public static final int lblPersonalizar=0x7f060008;
         public static final int lblPontoFinal=0x7f060014;
         public static final int lblPontoInicial=0x7f060013;
-        public static final int login_progress_signing_in=0x7f060031;
+        public static final int login_progress_signing_in=0x7f060034;
         public static final int ok=0x7f060018;
         /**  Strings related to login 
          */
-        public static final int prompt_email=0x7f06002c;
-        public static final int prompt_password=0x7f06002d;
+        public static final int prompt_email=0x7f06002f;
+        public static final int prompt_password=0x7f060030;
+        public static final int tempoRegressivo=0x7f06002c;
         public static final int title_activity_cadastrar_atividade=0x7f060028;
         public static final int title_activity_configuracoes=0x7f060024;
         public static final int title_activity_corrida=0x7f060026;
@@ -170,12 +172,13 @@ public final class R {
         public static final int title_activity_detalhes_meta=0x7f060023;
         public static final int title_activity_listar_atividades=0x7f060029;
         public static final int title_activity_locais_treino=0x7f060021;
-        public static final int title_activity_login=0x7f06002b;
+        public static final int title_activity_login=0x7f06002e;
         public static final int title_activity_main=0x7f060022;
         public static final int title_activity_map=0x7f06002a;
         public static final int title_activity_metas=0x7f060003;
         public static final int title_activity_nova_meta=0x7f060025;
         public static final int tituloMetas=0x7f060011;
+        public static final int velocidade=0x7f06002d;
         public static final int viewAlterarSenha=0x7f06000c;
         public static final int viewAtualizacoes=0x7f06000f;
         public static final int viewNotificacoes=0x7f06000d;

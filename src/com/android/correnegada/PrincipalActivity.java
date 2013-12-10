@@ -32,6 +32,13 @@ public class PrincipalActivity extends Activity {
 
 	}
 
+   
+
+	public void metasClick(View v) {
+		Intent TelaMetas = new Intent(getBaseContext(), MetasActivity.class);
+		startActivity(TelaMetas);
+	}
+	
 	public void iniciarCorrida(View v) {
 		Intent TelaCorrida = new Intent(getBaseContext(), CorridaActivity.class);
 		startActivity(TelaCorrida);

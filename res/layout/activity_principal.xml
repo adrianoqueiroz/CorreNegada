@@ -32,8 +32,8 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="atividadesClick"
-            android:text="@string/lblAtividades" />
+            android:onClick="metasClick"
+            android:text="@string/btMetas" />
 
         <Button
             android:id="@+id/btLocais"

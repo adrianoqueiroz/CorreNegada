@@ -62,7 +62,7 @@
 						    </EditText>
 						
 						    <TextView
-						        android:id="@+id/textView2"
+						        android:id="@+id/tVAtividade"
 						        android:layout_width="wrap_content"
 						        android:layout_height="wrap_content"
 						        android:layout_alignLeft="@+id/txtAtividade"
@@ -75,7 +75,7 @@
 						        android:layout_width="match_parent"
 						        android:layout_height="35dp"
 						        android:layout_alignLeft="@+id/txtAtividade"
-						        android:layout_below="@+id/textView2"
+						        android:layout_below="@+id/tVAtividade"
 						        android:ems="10" />
 						
 						    <View

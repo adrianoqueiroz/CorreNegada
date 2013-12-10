@@ -18,7 +18,8 @@ public class CorridaActivity extends Activity {
 	long tempoDaAtividade = 30000;
 
 	TextView cronometroRegressivo;
-
+	//TextView atividade = (TextView) findViewById(R.id.tVAtividade);
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -29,9 +30,9 @@ public class CorridaActivity extends Activity {
 		btIniciar.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
-
+				//atividade.setText("Aquecimento");
 				cronometro();
-				cronometroRegressivo();
+				cronometroRegressivo(tempoDaAtividade);
 			}
 		});
 	}
@@ -76,17 +77,23 @@ public class CorridaActivity extends Activity {
 
 	}
 
-	public void cronometroRegressivo() {
+	public void cronometroRegressivo(long tempoDaAtividade) {
 		cronometroRegressivo = (TextView) findViewById(R.id.countDown);
 		new CountDownTimer(tempoDaAtividade, 1000) {
-
+			
+			
 			public void onTick(long millisUntilFinished) {
 				cronometroRegressivo.setText(millisUntilFinished / 1000 / 60
 						+ ":" + millisUntilFinished / 1000 % 60);
 			}
 
 			public void onFinish() {
-				cronometroRegressivo.setText("Concluido!");
+				
+				//atividade.setText("Corrida Leve");
+				cronometroRegressivo(600000);
+				//cronometroRegressivo.setText("10:00");
+				
+				//TODO: 
 			}
 		}.start();
 	}
