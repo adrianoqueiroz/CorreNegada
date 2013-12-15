@@ -22,9 +22,8 @@
         android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btCorrer"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="56dp"
+        android:layout_centerVertical="true"
         android:orientation="vertical" >
 
         <Button
@@ -37,9 +36,10 @@
 
         <Button
             android:id="@+id/btLocais"
-            android:layout_width="205dp"
             style="?android:attr/buttonStyleSmall"
+            android:layout_width="205dp"
             android:layout_height="wrap_content"
+            android:onClick="locaisTreinoClick"
             android:text="@string/btLocaisTreino" />
 
         <Button
@@ -54,16 +54,15 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/btResultados" />    
+            android:text="@string/btResultados" />
 
-	    <Button
-	        android:id="@+id/btConfiguracoes"
-	        android:layout_width="match_parent"
-	        style="?android:attr/buttonStyleSmall"
-	        android:layout_height="wrap_content"
-	        android:onClick="AlterarConfiguracoesClick"
-	        android:text="@string/btConf" />
-	    
-	</LinearLayout>
+        <Button
+            android:id="@+id/btConfiguracoes"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="AlterarConfiguracoesClick"
+            android:text="@string/btConf" />
+    </LinearLayout>
 
 </RelativeLayout>
