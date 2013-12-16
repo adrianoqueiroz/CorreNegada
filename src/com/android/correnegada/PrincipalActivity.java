@@ -39,6 +39,11 @@ public class PrincipalActivity extends Activity {
 		startActivity(TelaMetas);
 	}
 	
+	public void dicasOnClick(View v) {
+		Intent dicas = new Intent(getBaseContext(), DicasActivity.class);
+		startActivity(dicas);
+	}	
+	
 	public void locaisTreinoClick(View v) {
 		Intent LocaisTreino = new Intent(getBaseContext(), LocaisTreinoActivity.class);
 		startActivity(LocaisTreino);
