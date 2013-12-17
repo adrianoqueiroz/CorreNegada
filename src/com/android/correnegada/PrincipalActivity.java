@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -12,24 +14,60 @@ public class PrincipalActivity extends Activity {
 
 	ListView listView;
 
-	Button btMetas, btCorrer;
+	Button btMetas, btResultados, btDicas, btCorrer, btSettings;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_principal);
+		
+        //final Animation animTranslate = AnimationUtils.loadAnimation(this, R.anim.anim_translate);
+        //final Animation animAlpha = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
+        final Animation animScale = AnimationUtils.loadAnimation(this, R.anim.anim_scale);
+        final Animation animRotate = AnimationUtils.loadAnimation(this, R.anim.anim_rotate);
+				
 		btMetas = (Button) findViewById(R.id.btMetas);
+		btResultados = (Button) findViewById(R.id.btResultados);
+		btDicas = (Button) findViewById(R.id.btDicas);
 		btCorrer = (Button) findViewById(R.id.btCorrer);
-
+		btSettings = (Button) findViewById(R.id.btSettings);
+		
 		btCorrer.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
 				Intent telaCorrida = new Intent(PrincipalActivity.this,
 						CorridaActivity.class);
+				
+				v.startAnimation(animScale);
+				
 				PrincipalActivity.this.startActivity(telaCorrida);
 			}
 		});
 
+		btResultados.setOnClickListener(new Button.OnClickListener(){
+
+			@Override
+			public void onClick(View arg0) {
+				arg0.startAnimation(animRotate);
+			}});
+		
+		btDicas.setOnClickListener(new Button.OnClickListener(){
+			@Override
+			public void onClick(View arg0) {
+				arg0.startAnimation(animRotate);
+				
+				Intent dicas = new Intent(getBaseContext(), DicasActivity.class);
+				PrincipalActivity.this.startActivity(dicas);	
+			}});
+		
+		btSettings.setOnClickListener(new Button.OnClickListener(){
+			@Override
+			public void onClick(View arg0) {
+				arg0.startAnimation(animRotate);
+				
+				Intent settings = new Intent(getBaseContext(), ConfiguracoesActivity.class);
+				PrincipalActivity.this.startActivity(settings);	
+			}});
 	}
 
    

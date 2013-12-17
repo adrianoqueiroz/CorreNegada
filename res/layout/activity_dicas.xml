@@ -19,9 +19,9 @@
     </ListView>
 
     <ImageView
-        android:id="@+id/imageAnimation"
+        android:id="@+id/logo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="120dp"
         android:layout_alignLeft="@+id/item_categoria"
         android:layout_alignParentRight="true"
         android:src="@drawable/logo" />
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/dicasListView"
         android:layout_alignRight="@+id/dicasListView"
-        android:layout_below="@+id/imageAnimation"
+        android:layout_below="@+id/logo"
         android:text="@string/title_dicas"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 

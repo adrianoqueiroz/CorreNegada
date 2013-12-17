@@ -9,36 +9,59 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".PrincipalActivity" >
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/logo" />
+
     <Button
         android:id="@+id/btCorrer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:layout_height="160dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="@layout/botao_correr"
         android:text="@string/btCorrer" />
 
+    <Button
+        android:id="@+id/btSettings"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@layout/bt_setting"
+        android:onClick="AlterarConfiguracoesClick" />
+
     <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/menuLayout"
+        android:layout_width="200dp"
+        android:layout_height="250dp"
         android:layout_above="@+id/btCorrer"
+        android:layout_below="@+id/logo"
         android:layout_centerHorizontal="true"
+        android:gravity="center"
         android:orientation="vertical" >
 
         <Button
             android:id="@+id/btMetas"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:background="@layout/bt_menu"
             android:onClick="metasClick"
             android:text="@string/btMetas" />
 
         <Button
             android:id="@+id/btLocais"
             style="?android:attr/buttonStyleSmall"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@layout/bt_menu"
             android:onClick="locaisTreinoClick"
             android:text="@string/btLocaisTreino" />
 
@@ -46,7 +69,8 @@
             android:id="@+id/btDicas"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:background="@layout/bt_menu"
             android:onClick="dicasOnClick"
             android:text="@string/btDicas" />
 
@@ -54,24 +78,9 @@
             android:id="@+id/btResultados"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:background="@layout/bt_menu"
             android:text="@string/btResultados" />
-
-        <Button
-            android:id="@+id/btConfiguracoes"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="AlterarConfiguracoesClick"
-            android:text="@string/btConf" />
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageAnimation"
-        android:layout_width="wrap_content"
-        android:layout_height="130dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/logo" />
 
 </RelativeLayout>
