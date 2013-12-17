@@ -78,7 +78,7 @@ public class LocaisTreinoActivity extends FragmentActivity {
 		// zoom in the google map
 		googleMap.animateCamera(CameraUpdateFactory.zoomTo(19));
 		googleMap.addMarker(new MarkerOptions().position(
-				new LatLng(latitude, longitude)).title("You are here!"));
+				new LatLng(latitude, longitude)).title("Você está aqui!"));
 		
 
 		

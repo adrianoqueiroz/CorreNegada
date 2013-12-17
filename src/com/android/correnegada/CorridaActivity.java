@@ -16,7 +16,10 @@ public class CorridaActivity extends Activity {
 	boolean isClickPause = false;
 	long tempoQuandoParado = 0;
 	long tempoDaAtividade = 30000;
+	
 
+	boolean pausado = true;
+	
 	TextView cronometroRegressivo;
 	//TextView atividade = (TextView) findViewById(R.id.tVAtividade);
 	
@@ -79,8 +82,10 @@ public class CorridaActivity extends Activity {
 
 	public void cronometroRegressivo(long tempoDaAtividade) {
 		cronometroRegressivo = (TextView) findViewById(R.id.countDown);
+		
+		if (pausado){
+			pausado = false;
 		new CountDownTimer(tempoDaAtividade, 1000) {
-			
 			
 			public void onTick(long millisUntilFinished) {
 				cronometroRegressivo.setText(millisUntilFinished / 1000 / 60
@@ -96,6 +101,9 @@ public class CorridaActivity extends Activity {
 				//TODO: 
 			}
 		}.start();
+		} else {
+			
+		}
 	}
 
 }
