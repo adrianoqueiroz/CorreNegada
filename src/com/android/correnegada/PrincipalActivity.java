@@ -69,7 +69,6 @@ public class PrincipalActivity extends Activity {
 				PrincipalActivity.this.startActivity(settings);	
 			}});
 	}
-
    
 
 	public void metasClick(View v) {
