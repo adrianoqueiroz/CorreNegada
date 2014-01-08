@@ -10,18 +10,20 @@
     tools:context=".DicasActivity" >
 
     <ListView
-        android:id="@+id/dicasListView"
+       android:id="@+id/dicasListView"
+        style="@layout/activity_dicas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/item_categoria">
+        android:layout_below="@+id/item_categoria" >
 
     </ListView>
-
+	 
     <ImageView
         android:id="@+id/logo"
+        android:contentDescription="@string/logo"
         android:layout_width="wrap_content"
         android:layout_height="120dp"
         android:layout_alignLeft="@+id/item_categoria"
@@ -37,5 +39,7 @@
         android:layout_below="@+id/logo"
         android:text="@string/title_dicas"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    
 
 </RelativeLayout>

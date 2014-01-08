@@ -51,5 +51,6 @@
     <string name="title_dicas">Dicas</string>
     <string name="btCorrer">Correr</string>
     <string name="title_activity_frame_animation">FrameAnimationActivity</string>
+    <string name="logo">logo</string>
 
 </resources>
