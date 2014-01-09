@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteCursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -75,6 +74,7 @@ public class ListarAtividadesActivity extends Activity implements LocationListen
 		String[] from = {"tipoAtividade", "caloriasPerdidas", "la", "lo"};
 		
 		int[] to = {R.id.txvAtividade, R.id.txvCaloria, R.id.txvLat, R.id.txvLon}; 
+		@SuppressWarnings("deprecation")
 		SimpleCursorAdapter adp = new SimpleCursorAdapter(getBaseContext(), R.layout.activity_listar_modelo, cursor, from , to);
 		
 		ListView ltwDados = (ListView)findViewById(R.id.atividades);
@@ -83,7 +83,7 @@ public class ListarAtividadesActivity extends Activity implements LocationListen
 		ltwDados.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 		
 			@Override
-			public void onItemClick(AdapterView adapter, View v, int position, long id) {
+			public void onItemClick(AdapterView<?> adapter, View v, int position, long id) {
 				
 				SQLiteCursor c = (SQLiteCursor) adapter.getAdapter().getItem(position);
 				Intent i = new Intent(getBaseContext(), MapActivity.class);
@@ -112,9 +112,7 @@ public class ListarAtividadesActivity extends Activity implements LocationListen
 			
 				try{
 					LocationManager localizacaoDispositivo = (LocationManager)getSystemService(Context.LOCATION_SERVICE); 
-					Criteria criteria = new Criteria();
-					
-					String provider = localizacaoDispositivo.NETWORK_PROVIDER;										
+					String provider = LocationManager.NETWORK_PROVIDER;										
 					Location location = localizacaoDispositivo.getLastKnownLocation(provider);
 					
 					la = location.getLatitude();
