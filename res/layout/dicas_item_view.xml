@@ -12,6 +12,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="20dp"
         android:adjustViewBounds="true"
+        android:contentDescription="@string/img"
         android:maxHeight="80dp"
         android:maxWidth="80dp"
         android:src="@drawable/alimentacao" />
@@ -23,7 +24,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/item_categoria"
         android:layout_marginTop="16dp"
-        android:text="Dica"
+        android:text="@string/dica"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -33,7 +34,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/item_icon"
         android:layout_marginTop="17dp"
-        android:text="Categoria"
+        android:text="@string/categoria"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>
