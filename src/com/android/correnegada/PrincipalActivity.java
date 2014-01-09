@@ -1,5 +1,7 @@
 package com.android.correnegada;
 
+import java.util.List;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,6 +22,14 @@ public class PrincipalActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_principal);
+		
+		Meta meta = new Meta(1, "Treino 1",3,4,10,10,50);
+		MetaDAO metaDAO = MetaDAO.getInstance(getBaseContext());
+		
+		metaDAO.Salvar(meta);
+		
+		metaDAO.fecharConexao();
+
 		
         //final Animation animTranslate = AnimationUtils.loadAnimation(this, R.anim.anim_translate);
         //final Animation animAlpha = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
