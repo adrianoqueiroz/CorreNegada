@@ -56,6 +56,13 @@ public class MetaDAO {
         return metas;
     }
     
+    public Meta getMetaByID(int id){
+    	String sql = "select * from " + NOME_TABELA + " where id = " + id;
+    	Cursor cursor = dataBase.rawQuery(sql, null);
+    	List<Meta> m = construirMetaPorCursor(cursor);
+    	return m.get(0);
+    }
+    
     public void deletar(Meta meta) {
     	 
         String[] valoresParaSubstituir = {
