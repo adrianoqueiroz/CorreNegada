@@ -1,5 +1,7 @@
 package com.android.correnegada;
 
+import java.util.List;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -35,8 +37,15 @@ public class MetasActivity extends Activity {
         
         btNovaMeta = (Button) findViewById(R.id.btNova);
 	
-        popularListView();
+        //popularListView();
         selecionaItemMenu();               
+	}
+	
+	@Override
+	public void onResume(){
+		super.onResume();
+		
+		popularListView();
 	}
 	
 	public void criarNovaMetaClick(View v){
@@ -47,13 +56,21 @@ public class MetasActivity extends Activity {
 	
 	private void popularListView(){
 		//criar lista de items
-		String[] lista = {"Meta 1", "Meta 2", "Meta 3", "Meta 4", "Meta 5", "Meta 6", "Meta 7", "Meta 8", "Meta 9", "Meta 10"};
+		//String[] lista = {"Meta 1", "Meta 2", "Meta 3", "Meta 4", "Meta 5", "Meta 6", "Meta 7", "Meta 8", "Meta 9", "Meta 10"};
 		//build adapter
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+		MetaDAO db = MetaDAO.getInstance(getBaseContext());
+		List<Meta> metas = db.recuperarTodos();
+		
+		ArrayAdapter<Meta> adapter = new ArrayAdapter<Meta>(
+				this,
+				R.layout.da_item,
+				metas);
+		
+		/*ArrayAdapter<String> adapter = new ArrayAdapter<String>(
 				this, //context da activity
 				R.layout.da_item, //layout usado na criacao
 				lista);//itens mostrados
-		
+		*/
 		//configurar a list view
 		ListView list = (ListView)findViewById(R.id.lVMetas);
 		list.setAdapter(adapter);
