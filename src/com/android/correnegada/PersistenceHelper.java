@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class PersistenceHelper extends SQLiteOpenHelper {
 
-	public static final String NOME_BANCO =  "CorreNegada";
+	public static final String NOME_BANCO =  "CorreNegada.db";
     public static final int VERSAO =  1;
      
     private static PersistenceHelper instance;

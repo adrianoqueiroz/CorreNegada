@@ -24,9 +24,18 @@ public class PrincipalActivity extends Activity {
 		setContentView(R.layout.activity_principal);
 		
 		Meta meta = new Meta(1, "Treino 1",3,4,10,10,50);
+		Meta meta2 = new Meta(2, "Treino 2",3,4,10,10,50);
+		Meta meta3 = new Meta(3, "Treino 3",3,4,10,10,50);
+		Meta meta4 = new Meta(4, "Treino 4",3,4,10,10,50);
+		Meta meta5 = new Meta(5, "Treino 5",3,4,10,10,50);
 		MetaDAO metaDAO = MetaDAO.getInstance(getBaseContext());
 		
+		
 		metaDAO.Salvar(meta);
+		metaDAO.Salvar(meta2);
+		metaDAO.Salvar(meta3);
+		metaDAO.Salvar(meta4);
+		metaDAO.Salvar(meta5);
 		
 		metaDAO.fecharConexao();
 

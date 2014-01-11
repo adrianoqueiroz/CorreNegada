@@ -12,17 +12,17 @@ public class MetaDAO {
 	
 	public static final String NOME_TABELA = "Metas";
     public static final String COLUNA_ID = "id";
-    public static final String COLUNA_TREINO = "nomeTreino";
+    public static final String COLUNA_TREINO = "treino";
     public static final String COLUNA_AQUECIMENTO = "aquecimento";
     public static final String COLUNA_CAMINHADA = "caminhada";
     public static final String COLUNA_TROTE = "trote";
     public static final String COLUNA_CORRIDA = "corrida";
     public static final String COLUNA_TEMPO_TOTAL = "tempoTotal";
     
-    public static final String SCRIPT_CRIACAO_TABELA_METAS = "CREATE TABLE " + NOME_TABELA + "("
-            + COLUNA_ID + " INTEGER PRIMARY KEY," + COLUNA_TREINO + " TEXT," + COLUNA_AQUECIMENTO + " INTEGER,"
-            + COLUNA_CAMINHADA + " INTEGER" + COLUNA_TROTE + " INTEGER" + COLUNA_CORRIDA + " INTEGER" +
-            COLUNA_TEMPO_TOTAL + " INTEGER" +")";
+    public static final String SCRIPT_CRIACAO_TABELA_METAS = "CREATE TABLE IF NOT EXISTS " + NOME_TABELA + "("
+            + COLUNA_ID + " INTEGER PRIMARY KEY, " + COLUNA_TREINO + " TEXT, " + COLUNA_AQUECIMENTO + " INTEGER, "
+            + COLUNA_CAMINHADA + " INTEGER, " + COLUNA_TROTE + " INTEGER, " + COLUNA_CORRIDA + " INTEGER, " +
+            COLUNA_TEMPO_TOTAL + " INTEGER" +");";
     
     public static final String SCRIPT_DELECAO_TABELA =  "DROP TABLE IF EXISTS " + NOME_TABELA;
     
@@ -117,6 +117,7 @@ public class MetaDAO {
         }
         return metas;
     }
+    
     
     private ContentValues gerarContentValuesMeta(Meta meta) {
         ContentValues values = new ContentValues();
