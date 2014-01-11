@@ -9,6 +9,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".NovaMetaActivity" >
 
+
+
     <EditText
         android:id="@+id/editMetaCaminhada"
         android:layout_width="wrap_content"
@@ -107,7 +109,7 @@
         android:layout_alignBaseline="@+id/editMetaTreino"
         android:layout_alignBottom="@+id/editMetaTreino"
         android:layout_alignLeft="@+id/textView2"
-        android:text="Título"
+        android:text="Treino"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -117,7 +119,7 @@
         android:layout_alignBaseline="@+id/editMetaTempoTotal"
         android:layout_alignBottom="@+id/editMetaTempoTotal"
         android:layout_alignLeft="@+id/textView5"
-        android:text="Total"
+        android:text="Tempo Total"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
@@ -152,9 +154,10 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView5"
-        android:layout_below="@+id/button1"
-        android:layout_marginTop="17dp"
+        android:layout_alignLeft="@+id/textView7"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="23dp"
+        android:layout_toLeftOf="@+id/textView1"
         android:text="Limpar" />
 
 </RelativeLayout>

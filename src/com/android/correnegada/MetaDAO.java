@@ -62,7 +62,7 @@ public class MetaDAO {
     	List<Meta> m = construirMetaPorCursor(cursor);
     	return m.get(0);
     }
-    
+     
     public void deletar(Meta meta) {
     	 
         String[] valoresParaSubstituir = {
