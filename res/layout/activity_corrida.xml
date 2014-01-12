@@ -69,7 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:text="Pular" />
+        android:background="@layout/botao_next" />
 
     <Button
         android:id="@+id/button2"
@@ -77,14 +77,15 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:text="Voltar" />
+        android:background="@layout/botao_back" />
 
     <TextView
         android:id="@+id/tVAtividade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/countDown"
+        android:layout_below="@+id/chronometer"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp"
         android:text="@string/atividade"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
