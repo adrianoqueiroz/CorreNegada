@@ -15,17 +15,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/tVKm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/progressBar1"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="34dp"
-        android:layout_toLeftOf="@+id/countDown"
-        android:text="@string/velocidade"
-        android:textSize="25sp" />
-
     <Button
         android:id="@+id/bt_cronometro"
         android:layout_width="100dp"
@@ -33,25 +22,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="@layout/botao_correr" />
-
-    <Chronometer
-        android:id="@+id/chronometer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tVKm"
-        android:layout_alignBottom="@+id/tVKm"
-        android:layout_toRightOf="@+id/countDown"
-        android:textSize="25sp" />
-
-    <TextView
-        android:id="@+id/kcal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/chronometer"
-        android:layout_alignBottom="@+id/chronometer"
-        android:layout_centerHorizontal="true"
-        android:text="@string/kcal"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
         android:id="@+id/countDown"
@@ -63,8 +33,50 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textSize="60sp" />
 
+    <TextView
+        android:id="@+id/tVKm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/progressBar1"
+        android:layout_marginLeft="35sp"
+        android:layout_marginTop="50sp"
+        android:text="@string/velocidade"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/kcal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBar1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50sp"
+        android:text="@string/kcal"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="25sp" />
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/progressBar1"
+        android:layout_marginRight="20sp"
+        android:layout_marginTop="50sp"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/tVAtividade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kcal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="95sp"
+        android:text="@string/atividade"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/bt_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -72,21 +84,11 @@
         android:background="@layout/botao_next" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/bt_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         android:background="@layout/botao_back" />
-
-    <TextView
-        android:id="@+id/tVAtividade"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/chronometer"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="44dp"
-        android:text="@string/atividade"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

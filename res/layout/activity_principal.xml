@@ -81,7 +81,6 @@
         android:layout_height="200dp"
         android:layout_alignBottom="@+id/btSettings"
         android:layout_centerHorizontal="true"
-        android:background="@layout/botao_correr"
-        android:text="@string/btCorrer" />
+        android:background="@layout/botao_correr" />
 
 </RelativeLayout>
