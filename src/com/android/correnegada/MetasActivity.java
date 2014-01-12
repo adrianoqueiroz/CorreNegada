@@ -1,8 +1,11 @@
 package com.android.correnegada;
 
+import java.util.List;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
@@ -21,7 +24,6 @@ public class MetasActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_metas);
-		
         btInicio = (Button) findViewById(R.id.btInicio);
         
         btInicio.setOnClickListener(new View.OnClickListener() {
@@ -32,11 +34,15 @@ public class MetasActivity extends Activity {
 				MetasActivity.this.finish();
 			}
 		});
-        
         btNovaMeta = (Button) findViewById(R.id.btNova);
-	
-        popularListView();
+        //popularListView();
         selecionaItemMenu();               
+	}
+	
+	@Override
+	public void onResume(){
+		super.onResume();
+		popularListView();
 	}
 	
 	public void criarNovaMetaClick(View v){
@@ -46,15 +52,12 @@ public class MetasActivity extends Activity {
 	}
 	
 	private void popularListView(){
-		//criar lista de items
-		String[] lista = {"Meta 1", "Meta 2", "Meta 3", "Meta 4", "Meta 5", "Meta 6", "Meta 7", "Meta 8", "Meta 9", "Meta 10"};
-		//build adapter
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-				this, //context da activity
-				R.layout.da_item, //layout usado na criacao
-				lista);//itens mostrados
-		
-		//configurar a list view
+		MetaDAO db = MetaDAO.getInstance(getBaseContext());
+		List<Meta> metas = db.recuperarTodos();
+		ArrayAdapter<Meta> adapter = new ArrayAdapter<Meta>(
+				this,
+				R.layout.da_item,
+				metas);
 		ListView list = (ListView)findViewById(R.id.lVMetas);
 		list.setAdapter(adapter);
 	}
@@ -66,37 +69,15 @@ public class MetasActivity extends Activity {
 			@Override
 			public void onItemClick(AdapterView<?> paret, View viewClicked, int posicao, long id){
 				TextView textViewItem = (TextView) viewClicked;
+				String meta = (String) textViewItem.getText();
+				String[] array = meta.split(" ");
+				int _id = Integer.parseInt(array[0]);
+				String mensagem = "Vendo detalhes de " + textViewItem.getText().toString();
+				Toast.makeText(MetasActivity.this, mensagem, Toast.LENGTH_SHORT).show();
 				
-				String mensagem;
-				//teste de mudanca de tela
-				switch(posicao){
-				case 0:
-					mensagem = "Vendo detalhes de " + textViewItem.getText().toString();
-					Toast.makeText(MetasActivity.this, mensagem, Toast.LENGTH_LONG).show();
-
-					Intent trocarActivity = new Intent( MetasActivity.this, DetalhesMetaActivity.class);
-	                startActivityForResult(trocarActivity, 1);
-					break;
-				case 1:
-					mensagem = "Vendo detalhes de " + textViewItem.getText().toString();
-					Toast.makeText(MetasActivity.this, mensagem, Toast.LENGTH_LONG).show();
-
-					Intent trocarActivity1 = new Intent( MetasActivity.this, DetalhesMetaActivity.class);
-	                startActivityForResult(trocarActivity1, 1);
-					break;
-
-				case 2:
-					mensagem = "Vendo detalhes de " + textViewItem.getText().toString();
-					Toast.makeText(MetasActivity.this, mensagem, Toast.LENGTH_LONG).show();
-
-					Intent trocarActivity2 = new Intent( MetasActivity.this, DetalhesMetaActivity.class);
-	                startActivityForResult(trocarActivity2, 1);
-					break;
-
-				default:
-					break;
-					
-				}
+				Intent trocarActivity = new Intent( MetasActivity.this, DetalhesMetaActivity.class);
+				trocarActivity.putExtra("id", _id);
+                startActivity(trocarActivity);
 			}
 		});
 	}

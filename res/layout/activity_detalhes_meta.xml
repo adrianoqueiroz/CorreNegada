@@ -8,5 +8,155 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".DetalhesMetaActivity" >
+    
+    
+    <EditText
+        android:id="@+id/editMetaCaminhada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editMetaTrote"
+        android:layout_below="@+id/editMetaAquecimento"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editMetaTrote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editMetaCaminhada"
+        android:layout_toRightOf="@+id/textView2"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editMetaCaminhada"
+        android:layout_alignBottom="@+id/editMetaCaminhada"
+        android:layout_alignParentLeft="true"
+        android:text="Caminhada"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editMetaTrote"
+        android:layout_alignBottom="@+id/editMetaTrote"
+        android:layout_alignLeft="@+id/textView3"
+        android:text="Trote"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editMetaCorrida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/editMetaTrote"
+        android:layout_below="@+id/editMetaTrote"
+        android:layout_toRightOf="@+id/textView2"
+        android:ems="10"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editMetaCorrida"
+        android:layout_alignBottom="@+id/editMetaCorrida"
+        android:layout_alignLeft="@+id/textView4"
+        android:text="Corrida"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editMetaAquecimento"
+        android:layout_alignBottom="@+id/editMetaAquecimento"
+        android:layout_alignParentLeft="true"
+        android:text="Aquecimento"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:text="Editar Meta"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editMetaAquecimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editMetaTreino"
+        android:layout_toRightOf="@+id/textView2"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editMetaTreino"
+        android:layout_alignBottom="@+id/editMetaTreino"
+        android:layout_alignLeft="@+id/textView2"
+        android:text="Treino"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editMetaTempoTotal"
+        android:layout_alignBottom="@+id/editMetaTempoTotal"
+        android:layout_alignLeft="@+id/textView5"
+        android:text="Tempo Total"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editMetaTreino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editMetaAquecimento"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="18dp"
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/editMetaTempoTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editMetaCorrida"
+        android:layout_below="@+id/editMetaCorrida"
+        android:layout_toLeftOf="@+id/toggleButton4"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/editMetaTempoTotal"
+        android:layout_below="@+id/editMetaTempoTotal"
+        android:layout_toRightOf="@+id/textView2"
+        android:text="Salvar" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView7"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="23dp"
+        android:layout_toLeftOf="@+id/textView1"
+        android:text="Excluir" />
 
 </RelativeLayout>

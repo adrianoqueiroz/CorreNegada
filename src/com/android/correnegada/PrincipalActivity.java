@@ -23,7 +23,7 @@ public class PrincipalActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_principal);
 		
-		Meta meta = new Meta(1, "Treino 1",3,4,10,10,50);
+		/*Meta meta = new Meta(1, "Treino 1",3,4,10,10,50);
 		Meta meta2 = new Meta(2, "Treino 2",3,4,10,10,50);
 		Meta meta3 = new Meta(3, "Treino 3",3,4,10,10,50);
 		Meta meta4 = new Meta(4, "Treino 4",3,4,10,10,50);
@@ -37,7 +37,7 @@ public class PrincipalActivity extends Activity {
 		metaDAO.Salvar(meta4);
 		metaDAO.Salvar(meta5);
 		
-		metaDAO.fecharConexao();
+		metaDAO.fecharConexao();*/
 
 		
         //final Animation animTranslate = AnimationUtils.loadAnimation(this, R.anim.anim_translate);

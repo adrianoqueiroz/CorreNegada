@@ -66,10 +66,10 @@ public class Meta {
 
 	@Override
 	public String toString(){
-		return treino + ": - aquecimento " + aquecimento + "min" +
+		return id + " - " + treino;/* + ": - aquecimento " + aquecimento + "min" +
 				" - caminhada" + caminhada + "min" +
 				" - caminhada" + trote + "min" +
 				" - caminhada" + corrida + "min" +
-				" - tempo de treino" + tempoTotal + "min -";
+				" - tempo de treino" + tempoTotal + "min -";*/
 	}
 }

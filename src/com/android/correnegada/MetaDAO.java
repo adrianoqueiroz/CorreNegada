@@ -1,5 +1,6 @@
 package com.android.correnegada;
 
+import java.io.Console;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,6 +8,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 public class MetaDAO {
 	
@@ -54,6 +56,13 @@ public class MetaDAO {
         return metas;
     }
     
+    public Meta getMetaByID(int id){
+    	String sql = "select * from " + NOME_TABELA + " where id = " + id;
+    	Cursor cursor = dataBase.rawQuery(sql, null);
+    	List<Meta> m = construirMetaPorCursor(cursor);
+    	return m.get(0);
+    }
+     
     public void deletar(Meta meta) {
     	 
         String[] valoresParaSubstituir = {
@@ -74,8 +83,10 @@ public class MetaDAO {
     }
     
     public void fecharConexao() {
-        if(dataBase != null && dataBase.isOpen())
-            dataBase.close(); 
+        if(dataBase != null && dataBase.isOpen()){
+            dataBase.close();
+            instance = null;
+        }
     }
     
     private List<Meta> construirMetaPorCursor(Cursor cursor) {
