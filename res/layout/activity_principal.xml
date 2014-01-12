@@ -20,15 +20,6 @@
         android:src="@drawable/logo" />
 
     <Button
-        android:id="@+id/btCorrer"
-        android:layout_width="110dp"
-        android:layout_height="160dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@layout/botao_correr"
-        android:text="@string/btCorrer" />
-
-    <Button
         android:id="@+id/btSettings"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="50dp"
@@ -83,5 +74,14 @@
             android:background="@layout/bt_menu"
             android:text="@string/btResultados" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btCorrer"
+        android:layout_width="110dp"
+        android:layout_height="200dp"
+        android:layout_alignBottom="@+id/btSettings"
+        android:layout_centerHorizontal="true"
+        android:background="@layout/botao_correr"
+        android:text="@string/btCorrer" />
 
 </RelativeLayout>

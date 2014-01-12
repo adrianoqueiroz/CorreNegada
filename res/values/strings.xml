@@ -28,7 +28,7 @@
     <string name="ok">Ok</string>
     <string name="inserir_atividade">Inserir tipo de atividade</string>
     <string name="calorias_perdidas">Calorias perdidas por m</string>
-    <string name="kcal">kcal</string>
+    <string name="kcal">0,0</string>
     <string name="adicionar_atividade">Adicionar as minhas atividades</string>
     <string name="cancelar">Cancelar</string>
     <string name="btInicio">Início</string>
@@ -55,5 +55,6 @@
     <string name="dica">Dica</string>
     <string name="categoria">Categoria</string>
     <string name="img">Img</string>
+    <string name="cronometro">00:00</string>
 
 </resources>
