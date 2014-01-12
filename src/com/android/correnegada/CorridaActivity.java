@@ -88,8 +88,22 @@ public class CorridaActivity extends Activity {
 		new CountDownTimer(tempoDaAtividade, 1000) {
 			
 			public void onTick(long millisUntilFinished) {
-				cronometroRegressivo.setText(millisUntilFinished / 1000 / 60
-						+ ":" + millisUntilFinished / 1000 % 60);
+				long minutos = millisUntilFinished / 1000 / 60;
+				long segundos = millisUntilFinished / 1000 % 60;
+				if(minutos < 10){
+					if(segundos < 10){
+						cronometroRegressivo.setText("0" + minutos + ":0" + segundos);
+					} else {
+						cronometroRegressivo.setText("0" + minutos + ":" + segundos);
+					}
+				} else {
+					if(segundos < 10){
+						cronometroRegressivo.setText(minutos + ":0" + segundos);
+					} else {
+						cronometroRegressivo.setText("0" + minutos + ":" + segundos);
+					}
+					
+				}
 			}
 
 			public void onFinish() {
