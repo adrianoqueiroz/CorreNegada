@@ -60,6 +60,18 @@ public class MetaDAO {
     	List<Meta> m = construirMetaPorCursor(cursor);
     	return m.get(0);
     }
+    
+    public void updateMeta(Meta meta){
+    	ContentValues args = new ContentValues();
+    	args.put(COLUNA_AQUECIMENTO, meta.getAquecimento());
+    	args.put(COLUNA_CAMINHADA, meta.getCaminhada());
+    	args.put(COLUNA_CORRIDA, meta.getCorrida());
+    	args.put(COLUNA_TEMPO_TOTAL, meta.getTempoTotal());
+    	args.put(COLUNA_TREINO, meta.getTreino());
+    	args.put(COLUNA_TROTE, meta.getTrote());
+    	dataBase.update(NOME_TABELA, args, COLUNA_ID + " = " + meta.getId(), null);
+    	
+    }
      
     public void deletar(Meta meta) {
     	 

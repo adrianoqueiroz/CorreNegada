@@ -49,7 +49,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
-        android:id="@+id/editMetaCorrida"
+        android:id="@+id/saveMetaCorrida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/editMetaTrote"
@@ -65,8 +65,8 @@
         android:id="@+id/tVKm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editMetaCorrida"
-        android:layout_alignBottom="@+id/editMetaCorrida"
+        android:layout_alignBaseline="@+id/saveMetaCorrida"
+        android:layout_alignBottom="@+id/saveMetaCorrida"
         android:layout_alignLeft="@+id/textView4"
         android:text="Corrida"
         android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -134,14 +134,14 @@
         android:id="@+id/editMetaTempoTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editMetaCorrida"
-        android:layout_below="@+id/editMetaCorrida"
+        android:layout_alignLeft="@+id/saveMetaCorrida"
+        android:layout_below="@+id/saveMetaCorrida"
         android:layout_toLeftOf="@+id/toggleButton4"
         android:ems="10"
         android:inputType="number" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btnEditMetaSalvar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/editMetaTempoTotal"
@@ -150,7 +150,7 @@
         android:text="Salvar" />
 
     <Button
-        android:id="@+id/bt_back"
+        android:id="@+id/btnEditMetaExcluir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView7"
