@@ -14,7 +14,7 @@ public class PrincipalActivity extends Activity {
 
 	ListView listView;
 
-	Button btMetas, btResultados, btDicas, btCorrer, btSettings;
+	Button btMetas, btLocais, btDicas, btResultados, btCorrer, btSettings, btSobre;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -44,10 +44,29 @@ public class PrincipalActivity extends Activity {
         final Animation animRotate = AnimationUtils.loadAnimation(this, R.anim.anim_rotate);
 				
 		btMetas = (Button) findViewById(R.id.btMetas);
+		btLocais = (Button) findViewById(R.id.btLocais);
 		btResultados = (Button) findViewById(R.id.btResultados);
 		btDicas = (Button) findViewById(R.id.btDicas);
 		btCorrer = (Button) findViewById(R.id.btCorrer);
 		btSettings = (Button) findViewById(R.id.btSettings);
+		btSobre = (Button) findViewById(R.id.bt_info);
+		btMetas.setOnClickListener(new Button.OnClickListener(){
+			@Override
+			public void onClick(View arg0) {
+				arg0.startAnimation(animRotate);
+				
+				Intent metas = new Intent(getBaseContext(), MetasActivity.class);
+				PrincipalActivity.this.startActivity(metas);	
+			}});		
+
+		btLocais.setOnClickListener(new Button.OnClickListener(){
+			@Override
+			public void onClick(View arg0) {
+				arg0.startAnimation(animRotate);
+				
+				Intent locais = new Intent(getBaseContext(), LocaisTreinoActivity.class);
+				PrincipalActivity.this.startActivity(locais);	
+			}});
 		
 		btCorrer.setOnClickListener(new View.OnClickListener() {
 
@@ -85,6 +104,15 @@ public class PrincipalActivity extends Activity {
 				Intent settings = new Intent(getBaseContext(), ConfiguracoesActivity.class);
 				PrincipalActivity.this.startActivity(settings);	
 			}});
+		
+		btSobre.setOnClickListener(new Button.OnClickListener(){
+			@Override
+			public void onClick(View arg0) {
+				//arg0.startAnimation(animRotate);
+				
+				Intent sobre = new Intent(getBaseContext(), InformacoesActivity.class);
+				PrincipalActivity.this.startActivity(sobre);	
+			}});
 	}
    
 
@@ -120,7 +148,7 @@ public class PrincipalActivity extends Activity {
 				ConfiguracoesActivity.class);
 		startActivity(TelaConf);
 	}
-
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.

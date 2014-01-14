@@ -11,13 +11,22 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:contentDescription="@string/logo"
         android:layout_width="wrap_content"
         android:layout_height="100dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
+        android:contentDescription="@string/logo"
         android:src="@drawable/logo" />
+
+    <Button
+        android:id="@+id/bt_info"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@layout/bt_info" />
 
     <Button
         android:id="@+id/btSettings"
@@ -26,7 +35,7 @@
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:background="@layout/bt_setting"
+        android:background="@layout/bt_settings"
         android:onClick="AlterarConfiguracoesClick" />
 
     <LinearLayout
@@ -45,7 +54,6 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@layout/bt_menu"
-            android:onClick="metasClick"
             android:text="@string/btMetas" />
 
         <Button
@@ -54,7 +62,6 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@layout/bt_menu"
-            android:onClick="locaisTreinoClick"
             android:text="@string/btLocaisTreino" />
 
         <Button
@@ -63,7 +70,6 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@layout/bt_menu"
-            android:onClick="dicasOnClick"
             android:text="@string/btDicas" />
 
         <Button

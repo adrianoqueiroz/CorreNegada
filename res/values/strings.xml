@@ -57,5 +57,7 @@
     <string name="img">Img</string>
     <string name="cronometro">00:00</string>
     <string name="animacao_corrida">animacao</string>
+    <string name="title_activity_informacoes">InformacoesActivity</string>
+    <string name="title_activity_sobre">SobreActivity</string>
 
 </resources>
