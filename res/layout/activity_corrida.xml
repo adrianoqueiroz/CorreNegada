@@ -66,11 +66,7 @@
         android:textSize="25sp" />
 
     <TextView
-<<<<<<< HEAD
-        android:id="@+id/tVAtividade"
-=======
         android:id="@+id/tVAtividadeAtual"
->>>>>>> d4b7c0acad4e4231a0a69ba1152aa84023362aa6
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/kcal"
@@ -88,11 +84,7 @@
         android:background="@layout/botao_next" />
 
     <Button
-<<<<<<< HEAD
-        android:id="@+id/btnEditMetaExcluir"
-=======
         android:id="@+id/bt_back"
->>>>>>> d4b7c0acad4e4231a0a69ba1152aa84023362aa6
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
