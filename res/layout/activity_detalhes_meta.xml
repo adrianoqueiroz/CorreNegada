@@ -57,16 +57,14 @@
         android:layout_toRightOf="@+id/textView2"
         android:ems="10"
         android:inputType="number" >
-
-        <requestFocus />
     </EditText>
 
     <TextView
         android:id="@+id/tVKm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/saveMetaCorrida"
-        android:layout_alignBottom="@+id/saveMetaCorrida"
+        android:layout_alignBaseline="@+id/editMetaCorrida"
+        android:layout_alignBottom="@+id/editMetaCorrida"
         android:layout_alignLeft="@+id/textView4"
         android:text="Corrida"
         android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -128,14 +126,19 @@
         android:layout_alignLeft="@+id/editMetaAquecimento"
         android:layout_below="@+id/kcal"
         android:layout_marginTop="18dp"
-        android:ems="10" />
+        android:ems="10" >
+
+        <requestFocus />
+        <requestFocus />
+
+    </EditText>
 
     <EditText
         android:id="@+id/editMetaTempoTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/saveMetaCorrida"
-        android:layout_below="@+id/saveMetaCorrida"
+        android:layout_alignLeft="@+id/editMetaCorrida"
+        android:layout_below="@+id/editMetaCorrida"
         android:layout_toLeftOf="@+id/toggleButton4"
         android:ems="10"
         android:inputType="number" />

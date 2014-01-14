@@ -84,7 +84,7 @@
         android:background="@layout/botao_next" />
 
     <Button
-        android:id="@+id/bt_back"
+        android:id="@+id/btnEditMetaExcluir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"

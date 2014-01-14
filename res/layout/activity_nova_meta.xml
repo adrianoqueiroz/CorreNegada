@@ -9,22 +9,20 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".NovaMetaActivity" >
 
-
-
     <EditText
-        android:id="@+id/editMetaCaminhada"
+        android:id="@+id/saveMetaCaminhada"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editMetaTrote"
-        android:layout_below="@+id/editMetaAquecimento"
+        android:layout_alignLeft="@+id/saveMetaTrote"
+        android:layout_below="@+id/saveMetaAquecimento"
         android:ems="10"
         android:inputType="number" />
 
     <EditText
-        android:id="@+id/editMetaTrote"
+        android:id="@+id/saveMetaTrote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editMetaCaminhada"
+        android:layout_below="@+id/saveMetaCaminhada"
         android:layout_toRightOf="@+id/textView2"
         android:ems="10"
         android:inputType="number" />
@@ -33,8 +31,8 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editMetaCaminhada"
-        android:layout_alignBottom="@+id/editMetaCaminhada"
+        android:layout_alignBaseline="@+id/saveMetaCaminhada"
+        android:layout_alignBottom="@+id/saveMetaCaminhada"
         android:layout_alignParentLeft="true"
         android:text="Caminhada"
         android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -43,31 +41,29 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editMetaTrote"
-        android:layout_alignBottom="@+id/editMetaTrote"
+        android:layout_alignBaseline="@+id/saveMetaTrote"
+        android:layout_alignBottom="@+id/saveMetaTrote"
         android:layout_alignLeft="@+id/textView3"
         android:text="Trote"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
-        android:id="@+id/editMetaCorrida"
+        android:id="@+id/saveMetaCorrida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/editMetaTrote"
-        android:layout_below="@+id/editMetaTrote"
+        android:layout_alignRight="@+id/saveMetaTrote"
+        android:layout_below="@+id/saveMetaTrote"
         android:layout_toRightOf="@+id/textView2"
         android:ems="10"
         android:inputType="number" >
-
-        <requestFocus />
     </EditText>
 
     <TextView
         android:id="@+id/tVKm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editMetaCorrida"
-        android:layout_alignBottom="@+id/editMetaCorrida"
+        android:layout_alignBaseline="@+id/saveMetaCorrida"
+        android:layout_alignBottom="@+id/saveMetaCorrida"
         android:layout_alignLeft="@+id/textView4"
         android:text="Corrida"
         android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -78,8 +74,8 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editMetaAquecimento"
-        android:layout_alignBottom="@+id/editMetaAquecimento"
+        android:layout_alignBaseline="@+id/saveMetaAquecimento"
+        android:layout_alignBottom="@+id/saveMetaAquecimento"
         android:layout_alignParentLeft="true"
         android:text="Aquecimento"
         android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -94,10 +90,10 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
-        android:id="@+id/editMetaAquecimento"
+        android:id="@+id/saveMetaAquecimento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editMetaTreino"
+        android:layout_below="@+id/saveMetaTreino"
         android:layout_toRightOf="@+id/textView2"
         android:ems="10"
         android:inputType="number" />
@@ -106,8 +102,8 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editMetaTreino"
-        android:layout_alignBottom="@+id/editMetaTreino"
+        android:layout_alignBaseline="@+id/saveMetaTreino"
+        android:layout_alignBottom="@+id/saveMetaTreino"
         android:layout_alignLeft="@+id/textView2"
         android:text="Treino"
         android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -116,48 +112,45 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editMetaTempoTotal"
-        android:layout_alignBottom="@+id/editMetaTempoTotal"
+        android:layout_alignBaseline="@+id/saveMetaTempoTotal"
+        android:layout_alignBottom="@+id/saveMetaTempoTotal"
         android:layout_alignLeft="@+id/tVKm"
         android:text="Tempo Total"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
-        android:id="@+id/editMetaTreino"
+        android:id="@+id/saveMetaTreino"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editMetaAquecimento"
+        android:layout_alignLeft="@+id/saveMetaAquecimento"
         android:layout_below="@+id/kcal"
         android:layout_marginTop="18dp"
-        android:ems="10" />
+        android:ems="10" >
+
+        <requestFocus />
+        <requestFocus />
+
+    </EditText>
 
     <EditText
-        android:id="@+id/editMetaTempoTotal"
+        android:id="@+id/saveMetaTempoTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editMetaCorrida"
-        android:layout_below="@+id/editMetaCorrida"
+        android:layout_alignLeft="@+id/saveMetaCorrida"
+        android:layout_below="@+id/saveMetaCorrida"
         android:layout_toLeftOf="@+id/toggleButton4"
         android:ems="10"
         android:inputType="number" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btnSaveMetaSalvar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/editMetaTempoTotal"
-        android:layout_below="@+id/editMetaTempoTotal"
+        android:layout_alignRight="@+id/saveMetaTempoTotal"
+        android:layout_below="@+id/saveMetaTempoTotal"
         android:layout_toRightOf="@+id/textView2"
         android:text="Salvar" />
 
-    <Button
-        android:id="@+id/bt_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView7"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="23dp"
-        android:layout_toLeftOf="@+id/kcal"
-        android:text="Limpar" />
+
 
 </RelativeLayout>
