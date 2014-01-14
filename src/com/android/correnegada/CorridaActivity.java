@@ -4,10 +4,12 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.SystemClock;
 import android.app.Activity;
+import android.graphics.drawable.AnimationDrawable;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class CorridaActivity extends Activity {
@@ -15,19 +17,19 @@ public class CorridaActivity extends Activity {
 	Button btIniciar, btPausar;
 	boolean isClickPause = false;
 	long tempoQuandoParado = 0;
-	
-	long tempoAquecimento = 15000;	
+
+	long tempoAquecimento = 15000;
 	long tempoCaminhada = 20000;
 	long tempoTrote = 30000;
-	long tempoCorrida = 30000;	
+	long tempoCorrida = 30000;
 	long tempoDesaquecimento = 15000;
 	long tempoTotal = 130000;
 
 	boolean naoIniciado = true;
-	
+
 	TextView cronometroRegressivo;
 	TextView atividade;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -40,8 +42,17 @@ public class CorridaActivity extends Activity {
 			public void onClick(View arg0) {
 				cronometro();
 				cronometroRegressivo(0);
+
+				ImageView ivLoader = (ImageView) findViewById(R.id.ivcorrer);
+				ivLoader.setBackgroundResource(R.anim.animacao);
+
+				AnimationDrawable frameAnimation = (AnimationDrawable) ivLoader
+						.getBackground();
+				frameAnimation.start();
+
 			}
 		});
+
 	}
 
 	@Override
@@ -84,25 +95,23 @@ public class CorridaActivity extends Activity {
 
 	}
 
-	
-	
 	public void cronometroRegressivo(final int idAtividade) {
-		if (naoIniciado){
+		if (naoIniciado) {
 			naoIniciado = false;
-			
+
 			cronometroRegressivo = (TextView) findViewById(R.id.countDown);
-			
+
 			atividade = (TextView) findViewById(R.id.tVAtividadeAtual);
-			
+
 			long tempoDaAtividade = 0;
-			
-			switch (idAtividade){
+
+			switch (idAtividade) {
 			case 0:
 				atividade.setText("Aquecimento");
 				tempoDaAtividade = tempoAquecimento;
 				break;
 			case 1:
-				atividade.setText("Caminhada");	
+				atividade.setText("Caminhada");
 				tempoDaAtividade = tempoCaminhada;
 				break;
 			case 2:
@@ -112,58 +121,62 @@ public class CorridaActivity extends Activity {
 			case 3:
 				atividade.setText("Corrida");
 				tempoDaAtividade = tempoCorrida;
-				break;	
+				break;
 			case 4:
 				atividade.setText("Desaquecimento");
 				tempoDaAtividade = tempoDesaquecimento;
 				break;
 			}
-			
-			new CountDownTimer(tempoDaAtividade, 1000) {
-			
-			public void onTick(long millisUntilFinished) {
-				long minutos = millisUntilFinished / 1000 / 60;
-				long segundos = millisUntilFinished / 1000 % 60;
-				if(minutos < 10){
-					if(segundos < 10){
-						cronometroRegressivo.setText("0" + minutos + ":0" + segundos);
-					} else {
-						cronometroRegressivo.setText("0" + minutos + ":" + segundos);
-					}
-				} else {
-					if(segundos < 10){
-						cronometroRegressivo.setText(minutos + ":0" + segundos);
-					} else {
-						cronometroRegressivo.setText("0" + minutos + ":" + segundos);
-					}
-					
-				}
-			}
 
-			public void onFinish() {
-				
-				//se o cronometro nao chegou no tempo totalproxima atividade se o tempo final nao foi atingido
-				//TODO: recuperar tempo do cronometro principal
-				long tempoAtualCronometro = 1000;
-				
-				if (tempoTotal > tempoAtualCronometro ){
-					if(idAtividade < 3){
-						naoIniciado = true;
-						cronometroRegressivo(idAtividade + 1);
+			new CountDownTimer(tempoDaAtividade, 1000) {
+
+				public void onTick(long millisUntilFinished) {
+					long minutos = millisUntilFinished / 1000 / 60;
+					long segundos = millisUntilFinished / 1000 % 60;
+					if (minutos < 10) {
+						if (segundos < 10) {
+							cronometroRegressivo.setText("0" + minutos + ":0"
+									+ segundos);
+						} else {
+							cronometroRegressivo.setText("0" + minutos + ":"
+									+ segundos);
+						}
+					} else {
+						if (segundos < 10) {
+							cronometroRegressivo.setText(minutos + ":0"
+									+ segundos);
+						} else {
+							cronometroRegressivo.setText("0" + minutos + ":"
+									+ segundos);
+						}
+
+					}
+				}
+
+				public void onFinish() {
+
+					// se o cronometro nao chegou no tempo totalproxima
+					// atividade se o tempo final nao foi atingido
+					// TODO: recuperar tempo do cronometro principal
+					long tempoAtualCronometro = 1000;
+
+					if (tempoTotal > tempoAtualCronometro) {
+						if (idAtividade < 3) {
+							naoIniciado = true;
+							cronometroRegressivo(idAtividade + 1);
+						} else {
+							naoIniciado = true;
+							cronometroRegressivo(1);
+						}
 					} else {
 						naoIniciado = true;
-						cronometroRegressivo(1);
+						cronometroRegressivo(4);
 					}
-				} else {
-					naoIniciado = true;
-					cronometroRegressivo(4);					
+
 				}
-				
-				
-			}
-		}.start();
+			}.start();
 		} else {
-			
+
 		}
 	}
 
