@@ -77,8 +77,8 @@
 
     <Button
         android:id="@+id/btCorrer"
-        android:layout_width="110dp"
-        android:layout_height="200dp"
+        android:layout_width="100dp"
+        android:layout_height="180dp"
         android:layout_alignBottom="@+id/btSettings"
         android:layout_centerHorizontal="true"
         android:background="@layout/botao_correr" />

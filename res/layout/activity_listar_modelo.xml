@@ -34,7 +34,7 @@
         android:text="Latitude" />
 
     <TextView
-        android:id="@+id/tVAtividade"
+        android:id="@+id/tVAtividadeAtual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/item_categoria"
@@ -46,8 +46,8 @@
         android:id="@+id/txvLon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tVAtividade"
-        android:layout_alignBottom="@+id/tVAtividade"
+        android:layout_alignBaseline="@+id/tVAtividadeAtual"
+        android:layout_alignBottom="@+id/tVAtividadeAtual"
         android:layout_marginLeft="14dp"
         android:layout_toRightOf="@+id/txvCaloria"
         android:text="Small Text"

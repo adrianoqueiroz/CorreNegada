@@ -44,7 +44,7 @@
     <string name="title_activity_cadastrar_atividade">CadastrarAtividadeActivity</string>
     <string name="title_activity_listar_atividades">ListarAtividadesActivity</string>
     <string name="title_activity_map">MapActivity</string>
-    <string name="atividade">Atividade X</string>
+    <string name="atividade">Parado</string>
     <string name="tempoRegressivo">00:00</string>
     <string name="velocidade">00</string>
     <string name="title_activity_dicas">DicasActivity</string>

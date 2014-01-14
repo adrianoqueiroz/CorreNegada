@@ -77,7 +77,7 @@ public class DetalhesMetaActivity extends Activity {
 		EditText txtAquecimento = (EditText) findViewById(R.id.editMetaAquecimento);
 		EditText txtCaminhada = (EditText) findViewById(R.id.editMetaCaminhada);
 		EditText txtTrote = (EditText) findViewById(R.id.editMetaTrote);
-		EditText txtCorrida = (EditText) findViewById(R.id.saveMetaCorrida);
+		EditText txtCorrida = (EditText) findViewById(R.id.editMetaCorrida);
 		EditText txtTempoTotal = (EditText) findViewById(R.id.editMetaTempoTotal);
 		
 		txtTreino.setText(meta.getTreino());
